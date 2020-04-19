@@ -25,5 +25,34 @@ $(function () {
         });
         $chatmsg.val("");
         $chatmsg.focus();
-    })
+        return false;
+    });
+
+    const addMessage = (data) => {
+        let text = "";
+        if (!isBlank(data.name)) {
+            text = '<strong>' + data.name + ':</strong>';
+        }
+        text += data.msg;
+        $chatlog.append('<div><span>'+ text +'</span></div>');
+    };
+
+    const es = new EventSource('/stream');
+    es.onopen = function(e) {
+        $.post('users/', {
+            name: username
+        });
+    };
+    es.onmessage = function (e) {
+        const msg = JSON.parse(e.data);
+        addMessage(msg);
+    };
+
+    window.onbeforeunload = function () {
+        $.ajax({
+            url: "/users?username=" + username,
+            type: "DELETE"
+        });
+        es.close();
+    };
 })

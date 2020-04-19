@@ -1,3 +1,5 @@
+github.com/antage/eventsource v0.0.0-20190412115600-84b661236871 h1:CU/EFaNIixooGaewG9cX4BShXURU/ejdC/r0Ly0jESo=
+github.com/antage/eventsource v0.0.0-20190412115600-84b661236871/go.mod h1:WOB/cuaphqWnO64ntuJ3CbpM+kDsKaQp1aeIB4AuXGI=
 github.com/gorilla/context v1.1.1 h1:AWwleXJkX/nhcU9bZSnZoi3h/qGYqQAGhq6zZe/aQW8=
 github.com/gorilla/context v1.1.1/go.mod h1:kBGZzfjB9CEq2AlWe17Uuf7NDRt0dE0s8S51q0aT7Yg=
 github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
